@@ -229,3 +229,8 @@ span {
 .name span:hover {
   color: var(--Cyan-400);
 }
+.attribution {
+  padding: var(--space-md);
+  text-align: center;
+  color: black;
+}
