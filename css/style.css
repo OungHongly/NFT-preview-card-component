@@ -127,6 +127,70 @@ span {
 /* ===== Style layout ====== */
 
 .container {
-  width: 90%;
-  margin: 0 auto;
+  height: 100vh;
+  background-color: var(--Blue-950-bg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 350px;
+  padding: 2.4rem;
+  background-color: var(--Blue-900-card);
+  border-radius: 1.2rem;
+  gap: var(--space-md);
+}
+.group-image {
+  border-radius: var(--space-sm);
+  overflow: hidden;
+}
+.group-image img {
+  width: 100%;
+}
+.card-heading {
+  font-size: 2.4rem;
+  font-weight: var(--fw-medium);
+  color: var(--White);
+}
+.card-description {
+  font-weight: var(--fw-light);
+}
+.group-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+.eth {
+  color: var(--Cyan-400);
+}
+.date {
+  font-weight: var(--fw-light);
+}
+.card-profile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--Blue-800-line);
+}
+.profile {
+  width: 35px;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+}
+.name {
+  font-weight: var(--fw-light);
+}
+.name span {
+  color: var(--White);
+  font-weight: var(--fw-normal);
 }
