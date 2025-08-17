@@ -21,12 +21,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./design/image.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [NFT preview card component](https://github.com/OungHongly/NFT-preview-card-component.git)
+- Live Site URL: [NFT-preview-card-component](https://ounghongly.github.io/NFT-preview-card-component/)
 
 ## My process
 
@@ -38,4 +38,50 @@ Users should be able to:
 
 ### What I learned
 
-...
+- I face with the challenge of hover state on image that show overlay background with view icon
+- And this is my solution to that:
+
+```HTML
+      <div class="group-image">
+          <img src="./images/image-equilibrium.jpg" alt="equilibrium"
+            class="card-image">
+        <div class="overlay">
+          <img src="./images/icon-view.svg" alt="view-icon" class="card-view">
+        </div>
+      </div>
+```
+
+```CSS
+  .group-image {
+  border-radius: var(--space-sm);
+  overflow: hidden;
+  position: relative;
+  }
+  .group-image img {
+    width: 100%;
+    display: block;
+  }
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Cyan-400);
+    top: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .overlay img {
+    width: 45px;
+    height: auto;
+  }
+  .group-image:hover .overlay {
+    opacity: 1;
+    background-color: rgba(0, 255, 247, 0.4);
+  }
+```
